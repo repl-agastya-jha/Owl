@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/menubar.png" alt="Owl Logo" width="128">
+  <img src="assets/lightbulb.png" alt="Owl Logo" width="128">
 </p>
 
 <p align="center">
@@ -55,10 +55,6 @@ Your rules sit dormant until the automation goes off-script. When the state chan
 ### 05 · Global Hotkeys
 
 Drives a real background override. Press `Cmd + Shift + L` from absolutely anywhere in macOS, and Owl flips the switch. No need to hunt for the menu bar icon when you're deeply focused in a full-screen app.
-
-## Screenshots
-
-![Settings Demo](assets/demo.gif)
 
 ---
 <p align="center">
