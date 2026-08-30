@@ -50,11 +50,7 @@ Other tools ship heavy Chromium instances or cross-platform UI frameworks just t
 
 ### 04 · Native Notifications
 
-Your rules sit dormant until the automation goes off-script. When the state changes—whether you hit the global hotkey (`Cmd + Shift + L`) or an app triggers it—you get a beautiful, native macOS notification. You get course-correction without second-guessing if your Mac will go to sleep.
-
-### 05 · Global Hotkeys
-
-Drives a real background override. Press `Cmd + Shift + L` from absolutely anywhere in macOS, and Owl flips the switch. No need to hunt for the menu bar icon when you're deeply focused in a full-screen app.
+Your rules sit dormant until the automation goes off-script. When the state changes—whether you manually toggle it or an app triggers it—you get a beautiful, native macOS notification. You get course-correction without second-guessing if your Mac will go to sleep.
 
 ---
 <p align="center">
