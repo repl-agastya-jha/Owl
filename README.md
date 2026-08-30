@@ -58,7 +58,7 @@ Drives a real background override. Press `Cmd + Shift + L` from absolutely anywh
 
 ## Screenshots
 
-*(Drop your gorgeous UI screenshots into the `assets/` folder to show off the Settings window!)*
+![Settings Demo](assets/demo.gif)
 
 ---
 <p align="center">
