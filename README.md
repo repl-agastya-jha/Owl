@@ -1,43 +1,66 @@
-# 🦉 Owl (formerly LidAwake)
+<p align="center">
+  <img src="assets/menubar.png" alt="Owl Logo" width="128">
+</p>
 
-Owl is a lightweight, fully native macOS utility that lives in your menu bar and intelligently prevents your Mac from sleeping. Whether you need to keep your Mac awake while downloading large files, running long scripts, or using specific applications, Owl has you covered.
+<p align="center">
+  <strong>A brilliant macOS menu bar utility to keep your Mac awake.</strong><br>
+  <strong>Intelligent. Native. Lightweight.</strong>
+</p>
 
-![Menu Bar Icon](assets/menubar.png)
+<p align="center">
+  <a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-F05138?style=flat&colorA=222222&logo=swift&logoColor=white" alt="Swift"></a>
+  <a href="https://apple.com/macos"><img src="https://img.shields.io/badge/macOS-000000?style=flat&colorA=222222&logo=apple&logoColor=white" alt="macOS"></a>
+  <a href="https://github.com/repl-agastya-jha/Owl/blob/main/LICENSE"><img src="https://img.shields.io/github/license/repl-agastya-jha/Owl?style=flat&colorA=222222&colorB=58A6FF" alt="License"></a>
+</p>
 
-## ✨ Features
+<p align="center">
+  Formerly known as <em>LidAwake</em>, Owl is the most capable power-management utility that ships. Continuously tuned by real-world use — complete out of the box, native all the way down.
+</p>
 
-- **Manual Override:** Quickly arm or disarm Owl straight from the menu bar or via the `Cmd + Shift + L` keyboard shortcut.
-- **Smart App Automation:** Automatically keep your Mac awake when specific apps (like Xcode, Cursor, VS Code, or Terminal) are running, and let it sleep when they are closed.
-- **Battery Safety Lock:** Owl actively monitors your battery. If your battery drops below a customizable threshold (e.g., 15%) while disconnected from power, Owl will instantly disarm itself to save your battery.
-- **Native Notifications:** Get native macOS notifications when the state changes so you always know what's happening.
-- **Feather-light:** Written purely in Swift with SwiftUI. No heavy Electron footprint.
+> [!NOTE]
+> Owl requires passwordless sudo for `pmset` to operate natively without constantly prompting for your password. The build script handles printing the exact command you need.
 
-## 🚀 Installation
+## Install
 
-*Note: Since Owl interacts with macOS's `pmset` power management tool, it requires a quick one-time passwordless sudo setup.*
+**macOS · Source Build**
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/repl-agastya-jha/Owl.git
-   cd Owl
-   ```
-2. Build the app using the provided script:
-   ```bash
-   ./build.sh
-   ```
-3. Run the one-time `pmset` configuration (this command will also be printed by the build script):
-   ```bash
-   echo "$(whoami) ALL=(ALL) NOPASSWD: /usr/bin/pmset" | sudo tee /etc/sudoers.d/pmset-nopasswd > /dev/null
-   ```
-4. Drag `Owl.app` to your `/Applications` folder and launch it!
+```sh
+git clone https://github.com/repl-agastya-jha/Owl.git
+cd Owl
+./build.sh
+```
 
-## ⚙️ How It Works
+> **Requirements:** Xcode Command Line Tools must be installed to compile the Swift source.
 
-Owl uses macOS's native `pmset` utility under the hood to toggle the `SleepDisabled` flag. It features an intelligent run loop that checks system status every 10 seconds, ensuring your settings (like battery safety and app automation) are strictly enforced even if you walk away from your computer.
+After building, simply drag `Owl.app` to your `/Applications` folder and run the one-time `pmset` configuration command printed to your terminal.
 
-## 📸 Screenshots
+## The power utility _you love_, with **batteries included**.
 
-*(To add more screenshots, drop them in the `assets/` directory!)*
+### 01 · Smart App Automation
+
+Most caffeinate apps require you to manually toggle them. Ours runs a persistent, highly-optimized background loop that watches your workspace. Open Xcode, Cursor, or Terminal, and Owl automatically arms itself. Close them, and it disarms. You never even have to click the menu bar.
+
+### 02 · Battery Safety Lock, wired into every tick
+
+A caffeinate utility is useless if it kills your Mac while it's in your backpack. Owl actively monitors your battery hardware. If your charge drops below your configured threshold (e.g., 15%) and the charger is disconnected, it forces a disarm. Automation is paused until you plug back in.
+
+### 03 · Unapologetically native. Zero Electron.
+
+Other tools ship heavy Chromium instances or cross-platform UI frameworks just to sit in your menu bar. We skipped that. Owl is written in 100% Swift and SwiftUI. It uses negligible memory and zero CPU cycles when idle. 
+
+### 04 · Native Notifications
+
+Your rules sit dormant until the automation goes off-script. When the state changes—whether you hit the global hotkey (`Cmd + Shift + L`) or an app triggers it—you get a beautiful, native macOS notification. You get course-correction without second-guessing if your Mac will go to sleep.
+
+### 05 · Global Hotkeys
+
+Drives a real background override. Press `Cmd + Shift + L` from absolutely anywhere in macOS, and Owl flips the switch. No need to hunt for the menu bar icon when you're deeply focused in a full-screen app.
+
+## Screenshots
+
+*(Drop your gorgeous UI screenshots into the `assets/` folder to show off the Settings window!)*
 
 ---
-*Created by [repl-agastya-jha](https://github.com/repl-agastya-jha)*
+<p align="center">
+  Created by <a href="https://github.com/repl-agastya-jha">repl-agastya-jha</a>
+</p>
