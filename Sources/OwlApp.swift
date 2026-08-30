@@ -7,7 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 @main
-struct LidAwakeApp: App {
+struct OwlApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var powerManager = SystemPowerManager.shared
     
